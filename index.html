@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .container-mainview {
+                display:flex;
+                flex-direction:column;
+                gap:15px;
+                justify-content:center;
+                align-items:center; 
+                height: 100vh;
+                /* position:relative;
+                top: 50%;
+                left: 50%;margin:0; 
+                down:50% */
+            }
+            .btn {
+                text-align:center;
+                display:flex;
+                background-color:#228B22;
+                padding:32px 42px
+            }
+            .testo {
+                display:flex;
+                justify-content:center;
+                align-items:center;
+            }
+            
+            .stopwatch-display {
+                display:none;
+                gap:5px;
+                flex-direction:row;
+            }
+            .container-inside {
+                display:none;
+                flex-direction:column;
+                gap:15px;
+                justify-content:center;
+                align-items:center; 
+                height: 100vh;
+            }
+            .buttons {
+                display:none;
+                gap:10px;
+                flex-direction:row;
+            }
+            .stopwatch {
+                display:none;
+                flex-direction:column;
+                justify-content:center;
+                align-items:center;
+                gap:10px;
+            }
+        </style>
+        <script src="script.js"></script>
+    </head>
+    
+    <body>
+        <div class="container-mainview">
+            <button type="button" class="btn" onclick="startSet()">►</button>
+            <span class="testo"> Avvia Serie 💪</span>
+        </div>
+        <div class="container-inside">
+            <div class="conta">
+                <span>COUNT:</span>
+                <span id="count">1</span>
+            </div>
+            <div class="stopwatch">
+                <span>STOPWATCH:</span>
+                <div class="stopwatch-display">
+                    <span id="hour">00</span>
+                    <span>:</span>
+                    <span id="min">00</span>
+                    <span>:</span>
+                    <span id="sec">00</span>
+                </div>
+                <div class="buttons">
+                    <button type="button" onclick="pause()">⏸</button>
+                    <button type="button" onclick="stop()">⏹</button>
+                    <button type="button" onclick="reset()">🔄</button>
+                </div>
+                
+            </div>
+        </div>
+    </body>
+     
+</html>
